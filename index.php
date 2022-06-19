@@ -18,7 +18,7 @@
     $request = $con -> query("SELECT * FROM message_board ORDER BY id desc");
     if (!$request){
         die('ERROR: ' . $con -> error);
-    }   
+    } 
 ?>
 
 <?php

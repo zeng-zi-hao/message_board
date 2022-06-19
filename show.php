@@ -1,5 +1,5 @@
 <?php
-	include_once "conn.php";
+	include "conn.php";
 	$id = $_GET["id"];
     $sql="SELECT * FROM `message_board` WHERE id = '$id'";
 	$result = mysqli_query($con , $sql) or die('MySQL query error');

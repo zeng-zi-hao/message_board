@@ -1,5 +1,5 @@
 <?php
-	include_once "conn.php";
+	include "conn.php";
     session_start();
 	switch ($_GET["method"]) {
 		case "create":
@@ -18,9 +18,9 @@
     function create(){
         include 'conn.php';
 
-        $user = $_POST['user'];
-        $title = $_POST['title'];
-        $content = $_POST['content'];
+        $user = $con -> real_escape_string($_POST['user']);
+        $title = $con -> real_escape_string($_POST['title']);
+        $content = $con -> real_escape_string($_POST['content']);
         date_default_timezone_set("Asia/Taipei");
         $create_at = date("Y:M:D H:i:s");
         
