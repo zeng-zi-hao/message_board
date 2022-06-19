@@ -35,11 +35,11 @@
 
 
     function update(){
+        include 'conn.php';
         $id = $_GET["id"];
-        $title = $_POST["title"];
-        $content = $_POST["content"];
+        $title = $con -> real_escape_string($_POST["title"]);
+        $content = $con -> real_escape_string($_POST["content"]);
         $sql = "UPDATE `message_board` SET title = '$title', content = '$content' WHERE id = $id";
-        global $con;
         $result = mysqli_query($con , $sql) or die('MySQL query error');
         echo "<script type='text/javascript'>";
         echo "alert('編輯留言成功');";
