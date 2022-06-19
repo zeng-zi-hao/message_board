@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>佈告欄</title>
+</head>
+
+<body>
+
+    <form action="func.php?method=create" method="post">
+        名稱<input type="text" name="user" maxlength="50" required="required"><br><br>
+        標題<input type="text" name="title" maxlength="50" required="required"><br><br>
+        內文<textarea rows="5" cols="22" name="content" maxlength="100" required="required"></textarea><br><br>
+        <button type="submit">建立</button>  
+    </form>    
+
+</body>
+</html>
